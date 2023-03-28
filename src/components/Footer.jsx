@@ -22,12 +22,12 @@ function Footer() {
               </h3>
               <ul className="space-y-1">
                 <li>Sosial</li>
-                <li>Health</li>
+                <li>Kesehatan</li>
                 <li>Lifestyle</li>
-                <li>Sports</li>
+                <li>Olahraga</li>
                 <li>Bisnis</li>
-                <li>Music</li>
-                <li>Technology</li>
+                <li>Musik</li>
+                <li>Teknologi</li>
               </ul>
             </div>
             <div className="space-y-3">
@@ -53,7 +53,7 @@ function Footer() {
                     rel="noopener noreferrer"
                     href="https://www.instagram.com/nayl.amalia/"
                   >
-                    Nayla Nur
+                    Nayla Nur A
                   </a>
                 </li>
                 <li>
