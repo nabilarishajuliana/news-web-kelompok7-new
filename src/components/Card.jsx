@@ -65,7 +65,6 @@ function Card() {
 
   const [keyword, setKeyword] = useState("");
     const [hasilFilter, setHasilfilter] = useState([]);
-    // const [data, setData] = useState([]);
 
     const handlefilter = (e) => {
         const filterData = data.filter((e) => {
@@ -94,14 +93,14 @@ function Card() {
                                 value={keyword}
                                 onChange={(e) => setKeyword(e.target.value)}
                             >
-                                <option value="">Category</option>
+                                <option value="">Pilihan Berita</option>
                                 <option value="bisnis">Bisnis</option>
-                                <option value="health">Health</option>
+                                <option value="health">Kesehatan</option>
                                 <option value="lifestyle">Lifestyle</option>
-                                <option value="music">Music</option>
+                                <option value="music">Musik</option>
                                 <option value="sosial">Sosial</option>
-                                <option value="sports">Sports</option>
-                                <option value="technology">Technology</option>
+                                <option value="sports">Olahraga</option>
+                                <option value="technology">Teknologi</option>
                             </select>
                         </form>
           </div>
@@ -306,7 +305,6 @@ function Card() {
                 </svg>
               </button>
             </div>
-            {/* end pagination */}
           </section>
         </div>
       </div>
