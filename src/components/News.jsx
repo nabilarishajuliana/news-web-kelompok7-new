@@ -1,8 +1,8 @@
 function News() {
   return (
     <div className="container mx-auto px-10 my-10">
-      <div className="text-center mb-5 pb-2 border-b-2 border-gray-400 font-medium ">
-        <h3 className="text-xl font-bold">Topik Favorit</h3>
+      <div className="text-center mb-5 pb-2 border-b-2 border-lime-500 font-medium ">
+        <h3 className="text-2xl font-bold">Topik Favorit</h3>
       </div>
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-4 sm:grid-cols-2">
         <div
@@ -29,7 +29,7 @@ function News() {
               rel="noopener noreferrer"
               className="px-3 py-2 text-xs font-semibold tracking-wider uppercase dark:text-gray-100 bgundefined"
             >
-              Health
+              Kesehatan
             </a>
           </div>
          
@@ -59,7 +59,7 @@ function News() {
               rel="noopener noreferrer"
               className="px-3 py-2 text-xs font-semibold tracking-wider uppercase dark:text-gray-100 bgundefined"
             >
-              Sports
+              Olahraga
             </a>
           </div>
          
