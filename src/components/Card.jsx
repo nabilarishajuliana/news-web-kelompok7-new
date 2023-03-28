@@ -5,7 +5,7 @@ function Card() {
   const [searchTerm, setSearchTerm] = useState("");
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(6);
+  const [itemsPerPage, setItemsPerPage] = useState(20);
   const [totalPages, setTotalPages] = useState(0);
 
   const router = useRouter();
@@ -79,13 +79,6 @@ function Card() {
         handlefilter();
     }, [data, keyword]);
 
-    function getFiltered(filtered) {
-        if (filtered === 0) {
-            return "Barang Tidak Ada";
-        } else {
-            return filtered + " Products ";
-        }
-    }
 
     
   return (
@@ -102,10 +95,13 @@ function Card() {
                                 onChange={(e) => setKeyword(e.target.value)}
                             >
                                 <option value="">Category</option>
-                                <option value="Politics">Politics</option>
-                                <option value="Health">Health</option>
-                                <option value="Entertaiment">Entertaiment</option>
-                                <option value="Sports">Sports</option>
+                                <option value="bisnis">Bisnis</option>
+                                <option value="health">Health</option>
+                                <option value="lifestyle">Lifestyle</option>
+                                <option value="music">Music</option>
+                                <option value="sosial">Sosial</option>
+                                <option value="sports">Sports</option>
+                                <option value="technology">Technology</option>
                             </select>
                         </form>
           </div>
@@ -150,7 +146,60 @@ function Card() {
         <div className="container my-5  mx-auto">
           <section className="mb-32 text-gray-800">
             <div className="grid lg:grid-cols-3 gap-6">
-              {data
+              {hasilFilter? hasilFilter.map((val) => {
+                  let content = val.content;
+                  let excerpt = "";
+
+                  if (Array.isArray(content)) {
+                    excerpt = content[0].text.substring(0, 120) + "...";
+                  } else if (typeof content === "string") {
+                    excerpt = content.substring(0, 120) + "...";
+                  }
+
+                  return (
+                    <article className="overflow-hidden rounded-lg border border-gray-100 shadow-sm">
+                      <img
+                        alt="Office"
+                        src={val.image.image_url}
+                        className="h-56 w-full object-cover"
+                      />
+
+                      <div className="p-4 sm:p-6">
+                        <p className="bg-blue-500 text-white px-0.5 rounded-md w-24 text-center">
+                          {val.category}
+                        </p>
+                        <a href="#">
+                          <h3 className="text-lg font-medium text-gray-900">
+                            {val.title}
+                          </h3>
+                        </a>
+                        <div className="block text-xs text-gray-500">
+                          <time datetime={val.createdAt}>
+                            {new Date(val.createdAt).toLocaleDateString()}
+                          </time>
+                          • {val.author}
+                        </div>
+
+                        <p className="mt-2 text-sm leading-relaxed text-gray-800 line-clamp-3">
+                          <div dangerouslySetInnerHTML={{ __html: excerpt }} />
+                        </p>
+
+                        <button
+                          onClick={() => router.push(`/news/${val.slug}`)}
+                          className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+                        >
+                          Lanjukan membaca
+                          <span
+                            aria-hidden="true"
+                            className="block transition group-hover:translate-x-0.5"
+                          >
+                            &rarr;
+                          </span>
+                        </button>
+                      </div>
+                    </article>
+                  );
+                }) : data
                 .filter((val) => {
                   if (searchTerm == "") {
                     return val;

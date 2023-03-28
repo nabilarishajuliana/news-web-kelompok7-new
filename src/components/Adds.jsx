@@ -13,7 +13,6 @@ function Adds() {
 			<h2 className="text-3xl font-semibold leading-none">Lemonilo Gelar Fan Event Eksklusif sebagai Puncak Kerja Sama dengan NCT DREAM</h2>
 			<p className="mt-4 mb-8 text-sm"> Lemonilo bersama NCT DREAM menghadirkan berbagai inisiatif, seperti kemasan kolaborasi mie instan Lemonilo spesial NCT DREAM, photocard, hingga postcard dengan gambar personil NCT DREAM</p>
             <a rel="noopener noreferrer" href="https://www.lemonilo.com/blog/lemonilo-gelar-fan-event-eksklusif-sebagai-puncak-kerja-sama-dengan-nct-dream" className='px-2 py-3 text-lg font-medium '><button className='bg-lime-500 rounded-3xl px-10 py-3 hover:bg-lime-400'>Simak Lebih lanjut</button></a>
-			
 		</div>
 	</div>
 </section>

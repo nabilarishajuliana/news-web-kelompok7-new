@@ -10,7 +10,10 @@ function Home() {
       <Navbar />
       <Adds />
       <News />
-      <Card />
+      <section id="News">
+        <Card />
+      </section>
+      
       <section id="Footer">
         <Footer />
       </section>
