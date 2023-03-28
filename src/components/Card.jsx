@@ -145,15 +145,21 @@ function Card() {
         <div className="container my-5  mx-auto">
           <section className="mb-32 text-gray-800">
             <div className="grid lg:grid-cols-3 gap-6">
-              {hasilFilter? hasilFilter.map((val) => {
-                  let content = val.content;
-                  let excerpt = "";
+              {hasilFilter
+                ? hasilFilter
+                  .filter((products) =>
+                    searchTerm !== ""
+                      ? products.title.toLowerCase().includes(searchTerm)
+                      : products
+                  ).map((val) => {
+                    let content = val.content;
+                    let excerpt = "";
 
-                  if (Array.isArray(content)) {
-                    excerpt = content[0].text.substring(0, 120) + "...";
-                  } else if (typeof content === "string") {
-                    excerpt = content.substring(0, 120) + "...";
-                  }
+                    if (Array.isArray(content)) {
+                      excerpt = content[0].text.substring(0, 120) + "...";
+                    } else if (typeof content === "string") {
+                      excerpt = content.substring(0, 120) + "...";
+                    }
 
                   return (
                     <article className="overflow-hidden rounded-lg border border-gray-100 shadow-sm">
