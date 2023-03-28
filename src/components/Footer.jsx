@@ -10,8 +10,8 @@ function Footer() {
               className="flex justify-center space-x-3 lg:justify-start font-bold text-xl cursor-pointer items-center font-[Poppins] 
       text-gray-800"
             >
-              <h2>
-                Huang <span className="text-blue-500">News</span>
+              <h2 className="text-2xl font-bold">
+                Huang <span className="text-lime-800">News</span>
               </h2>
             </a>
           </div>
@@ -21,10 +21,13 @@ function Footer() {
                 Category
               </h3>
               <ul className="space-y-1">
-                <li>Politics</li>
+                <li>Sosial</li>
                 <li>Health</li>
-                <li>Entertaiment</li>
+                <li>Lifestyle</li>
                 <li>Sports</li>
+                <li>Bisnis</li>
+                <li>Music</li>
+                <li>Technology</li>
               </ul>
             </div>
             <div className="space-y-3">
@@ -115,7 +118,7 @@ function Footer() {
           </div>
         </div>
         <div className="py-6 text-sm text-center dark:text-gray-400">
-          Copyright © 2023 Ini Beritaku designed by Kelompok7
+          Copyright © 2023 HuangNews designed by Kelompok7
         </div>
       </footer>
     </>
