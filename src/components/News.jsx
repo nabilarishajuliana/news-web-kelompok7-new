@@ -18,7 +18,6 @@ function News() {
               Sosial
             </a>
           </div>
-          <h2 className="z-10 p-5">
         </div>
         <div
           className="relative flex items-end justify-start w-full text-left bg-center bg-cover h-96 dark:bg-gray-500"
