@@ -85,11 +85,11 @@ function Card() {
     <>
       <div className="container mx-auto px-8">
         <div className="text-black mt-10">
-          <div className="text-center mb-5 pb-2 border-b-2 border-slate-400">
-            <h3 className="text-xl font-bold">Berita Populer</h3>
+          <div className="text-center mb-5 pb-3 border-b-2 border-lime-500">
+            <h3 className="text-2xl font-bold pb-1">Berita Populer</h3>
             <form onChange={handlefilter}>
                             <select
-                                className="filter border-none hover:border-none text-black  hover:text-blue-600 "
+                                className="filter border-none hover:border-none text-black  hover:text-lime-600 "
                                 name="isAvailable"
                                 value={keyword}
                                 onChange={(e) => setKeyword(e.target.value)}
@@ -133,7 +133,7 @@ function Card() {
               <input
                 type="search"
                 id="default-search"
-                className="block w-full px-4 py-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block w-full px-4 py-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-lime-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-lime-500"
                 placeholder="Let's search"
                 required
                 onChange={(event) => {
@@ -165,7 +165,7 @@ function Card() {
                       />
 
                       <div className="p-4 sm:p-6">
-                        <p className="bg-blue-500 text-white px-0.5 rounded-md w-24 text-center">
+                        <p className="bg-lime-500 text-white px-0.5 rounded-md w-24 text-center">
                           {val.category}
                         </p>
                         <a href="#">
