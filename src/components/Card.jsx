@@ -88,7 +88,7 @@ function Card() {
             <h3 className="text-2xl font-bold pb-1">Berita Populer</h3>
             <form onChange={handlefilter}>
                             <select
-                                className="filter border-none hover:border-none text-black  hover:text-lime-600 "
+                                className="filter border-2 border-lime-500 rounded-md hover:border-lime-500 text-black  hover:text-lime-600"
                                 name="isAvailable"
                                 value={keyword}
                                 onChange={(e) => setKeyword(e.target.value)}
