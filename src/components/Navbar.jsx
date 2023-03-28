@@ -15,7 +15,7 @@ const Navbar = () => {
       text-gray-800 "
         >
           <h2>
-            Huang <span className="text-blue-500">News</span>
+            Huang <span className="text-lime-800">News</span>
           </h2>
         </div>
 
